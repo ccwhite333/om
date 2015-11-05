@@ -16,6 +16,10 @@ body{
 	background-attachment: fixed !important;
 	background-size: cover;
 }
+.opaque-bg{
+	background: #333;
+    opacity: .33;
+}
 header{
 	nav{
 		position: fixed;
@@ -84,6 +88,11 @@ button{
 button:focus{
 		outline: #C5B358 auto 5px;
 }
+footer{
+	@extend .opaque-bg;
+	margin: 50px 0;
+	padding: 15px 25px;
+}
 .btn-submit{
 	background: #333;
 }
@@ -109,8 +118,7 @@ button:focus{
 }
 
 .intro-text{
-    background: #333;
-    opacity: .33;
+    @extend .opaque-bg;
     padding: 4px;
     font-family: "Palatino Linotype" $font-stack;
 }
