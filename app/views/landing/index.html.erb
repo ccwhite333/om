@@ -45,7 +45,7 @@
       <%= f.text_field :lastname, class:"control",'required' =>"required" %>
 	  </div>
 	  
-	  <div class="form-group">
+	  <div class="form-group" >
 	  <label for="address"> Address 1</label>
       <%= f.text_field :address1, class:"control",'required' =>"required" %>
 	  <label for="address2"> Address 2</label>
@@ -55,14 +55,18 @@
 	  <label for="state"> State</label>
       <%=select_tag 'State', options_for_select(us_states),:name=>"state", :class=>"control",:id=>"state"%>
 	  </div>
-      <%= f.label :email %>
+      <label for="email"> E-mail</label>
       <%= f.email_field :email, :class=>"control" %>
 		<div class="form-group">
-      <%= f.label :creditnumber %>
-      <%= f.password_field :creditnumber, :class=>"control" %>
+     <label for="cardnumber"> Card Number</label>
+      <%= f.number_field :cardnumber, :class=>"control" %>
+	  <label for="expire"> Expire Month/Year</label>
+      <%= f.month_field :expire, :class=>"control", "maxlength" => 2 %>
+	  <label for="cvv"> CVV</label>
+      <%= f.password_field :cvv, :class=>"control" %>
 	  </div>
 	  <div class="form-group">
-      <%= f.button "Purchase OM", class: "btn btn-primary" %>
+      <%= f.button "Purchase OM", class: "btn-submit" %>
 	  </div>
 	  </fieldset>
     <% end %>

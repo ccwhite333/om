@@ -54,7 +54,6 @@ input, select{
 	border: 4px;
 	font-size: 15px;
 	font-family: $font-stack;
-	
 }
 fieldset{
 	border: none;
@@ -85,6 +84,9 @@ button{
 button:focus{
 		outline: #C5B358 auto 5px;
 }
+.btn-submit{
+	background: #333;
+}
 .section-header{
 	text-align: center;
 }
@@ -93,6 +95,7 @@ button:focus{
 	margin: auto;
 }
 .form-group{
+	transition: left 1s ease;
 	clear: left;
 	border-top: 1px solid #fff;
 	padding-top: 15px;
@@ -103,8 +106,8 @@ button:focus{
 	width: 178px;
 	height: 178px;
 	margin: auto;
-	
 }
+
 .intro-text{
     background: #333;
     opacity: .33;
