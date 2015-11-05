@@ -1,0 +1,123 @@
+// Place all the styles related to the landing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack : Verdana, Helvetica, sans-serif;
+$text-color : #FFF;
+
+body{
+	font: 15px $font-stack;
+	color: $text-color;
+}
+.bg{
+	margin: 0px;
+	background-image: image-url('lotus.png');
+	background-position: top center !important;
+	background-attachment: fixed !important;
+	background-size: cover;
+}
+header{
+	nav{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+	}
+	display: block;
+	min-height: 176px;
+	.wrap{
+		margin: 15% auto;
+		text-align: center;
+	}
+}
+h1{
+	font-family: "Palatino Linotype" $font-stack;
+	font-size: 1.7em;
+}
+section{
+	padding-top: 100px;
+}
+label{
+	display: inline-block;
+	float: left;
+	clear: left;
+	width: 20%;
+	text-align: right;
+}
+input, select{
+	width: 40%;
+	display: inline-block;
+	float: left;
+    margin: 0 10px 10px;
+	padding: 3px;
+    line-height: 25px;
+	border-radius: 3px;
+	border: 4px;
+	font-size: 15px;
+	font-family: $font-stack;
+	
+}
+fieldset{
+	border: none;
+}
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li { display: inline-block; }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+	color: $text-color;
+  }
+}
+button{
+	background: #c1bc92;
+	color: $text-color;
+	font: 15px $font-stack;
+	padding: 10px;
+	margin: 5px 10px;
+	border: 1px solid transparent;
+    border-radius: 4px;
+}
+button:focus{
+		outline: #C5B358 auto 5px;
+}
+.section-header{
+	text-align: center;
+}
+.form-centered{
+	max-width: 800px;
+	margin: auto;
+}
+.form-group{
+	clear: left;
+	border-top: 1px solid #fff;
+	padding-top: 15px;
+	text-align: center;
+}
+.om{
+	background-image: image-url('om.png');
+	width: 178px;
+	height: 178px;
+	margin: auto;
+	
+}
+.intro-text{
+    background: #333;
+    opacity: .33;
+    padding: 4px;
+    font-family: "Palatino Linotype" $font-stack;
+}
+
+.site-content {
+	background: rgba(193, 188, 146, .7);
+    color: $text-color;
+	min-height: 900px;
+}
+.right{
+	float: right !important;
+}
+

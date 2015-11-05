@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OM | Taste Enlightenment</title>
+</head>
+<body class="bg">
+<div class="preloader"><div class="status">&nbsp;</div></div>
+<header id="home" class="header">
+	<div id="main-nav" role="banner">
+		<div class="container">
+			<nav class="right" role="navigation"  id="site-navigation">
+				<ul>
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Shop</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- / END TOP BAR -->
+<div class="wrap">
+<div class="container">
+<div class="om"></div>
+<h1 class="intro-text">Taste Enlightenment</h1>
+<button id="orderNow">Order Now</button>
+</div>
+</div><!-- .header-content-wrap --><div class="clear"></div>
+</header> <!-- / END HOME SECTION  -->
+<div id="content" class="site-content">
+		<section class="order-now" id="ordernow">
+			<div class="container">
+				<div class="section-header">				
+					<h1>Order Your Taste...</h2>				
+				</div>
+
+<div class="row">
+  <div class="form-centered">
+    <%= form_for @order do |f| %>
+	<fieldset>
+	<div class="form-group">
+      <label for="firstname"> First Name</label>
+      <%= f.text_field :firstname, class:"control", 'required' =>"required" %>
+	  
+	  <label for="lastname"> Last Name</label>
+      <%= f.text_field :lastname, class:"control",'required' =>"required" %>
+	  </div>
+	  
+	  <div class="form-group">
+	  <label for="address"> Address 1</label>
+      <%= f.text_field :address1, class:"control",'required' =>"required" %>
+	  <label for="address2"> Address 2</label>
+      <%= f.text_field :address2, class:"control"%>
+	  <label for="city"> City</label>
+      <%= f.text_field :city, class:"control", 'required' =>"required" %>
+	  <label for="state"> State</label>
+      <%=select_tag 'State', options_for_select(us_states),:name=>"state", :class=>"control",:id=>"state"%>
+	  </div>
+      <%= f.label :email %>
+      <%= f.email_field :email, :class=>"control" %>
+		<div class="form-group">
+      <%= f.label :creditnumber %>
+      <%= f.password_field :creditnumber, :class=>"control" %>
+	  </div>
+	  <div class="form-group">
+      <%= f.button "Purchase OM", class: "btn btn-primary" %>
+	  </div>
+	  </fieldset>
+    <% end %>
+  </div>
+</div>
+
+
+			</div> <!-- / END CONTAINER -->
+
+		</section> <!-- / END CONTACT US SECTION-->
+
+<footer id="footer">
+	
+</footer> <!-- / END FOOOTER  -->
+</body>
+</html>
+
